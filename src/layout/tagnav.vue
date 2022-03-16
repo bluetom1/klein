@@ -1,6 +1,6 @@
 <template>
 	<el-button @click="addTab">add tab</el-button>
-	<el-tabs v-model="tab.tabCheck" type="card" editable @tab-click="clickTab" @tab-remove="removeTab">
+	<el-tabs v-model="tab.tabCheck" type="card" closable @tab-click="clickTab" @tab-remove="removeTab">
 		<el-tab-pane v-for="item in tab.tabs" :label="item.title" :name="item.name" :key="item.name">
 			{{ item.content }}
 		</el-tab-pane>
